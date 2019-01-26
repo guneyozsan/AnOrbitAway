@@ -1,3 +1,5 @@
+Some 3rd party assets may have different licenses.
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
