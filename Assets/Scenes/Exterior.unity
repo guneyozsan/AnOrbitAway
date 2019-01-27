@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idle: {fileID: 479840562}
-  active: {fileID: 1274842380}
+  repairing: {fileID: 1274842380}
 --- !u!114 &168893868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274842381}
   m_Layer: 5
-  m_Name: Active
+  m_Name: Repairing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,6 +981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c3b31f17463c547a0d0056b11b56e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maintenanceSpeed: 0.25
+  depreciationSpeed: 0.1
+  progressBar: {fileID: 1411193171}
 --- !u!1001 &1334754647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1050,6 +1053,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be25390f19f4a824cacc5e536b8bd209, type: 3}
+--- !u!114 &1411193171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114769781544105922, guid: 5eefba205a58c8c4a937c97b87c185a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1518214754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149d864443ddca94ba93b092e7acd5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1478409959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6293872a31346bc449af676b9f99e5bc,
@@ -1204,7 +1219,7 @@ PrefabInstance:
     - target: {fileID: 114769781544105922, guid: 5eefba205a58c8c4a937c97b87c185a3,
         type: 3}
       propertyPath: Title
-      value: REPAIRING
+      value: MAINTENANCE
       objectReference: {fileID: 0}
     - target: {fileID: 114769781544105922, guid: 5eefba205a58c8c4a937c97b87c185a3,
         type: 3}
