@@ -17,7 +17,7 @@ public class Maintenance : MonoBehaviour
 
     private void Awake()
     {
-        maintenanceAmount = 0;
+        maintenanceAmount = 100f;
         MaintenanceIcon.RepairStarted += MaintenanceIcon_RepairStarted;
         MaintenanceIcon.RepairQuit += MaintenanceIcon_RepairQuit;
     }
@@ -26,14 +26,14 @@ public class Maintenance : MonoBehaviour
     {
         if (repairing)
         {
-            if (maintenanceAmount < 100)
+            if (maintenanceAmount < 100f)
             {
                 maintenanceAmount += maintenanceSpeed;
             }
         }
         else
         {
-            if (maintenanceAmount > 0)
+            if (maintenanceAmount > 0f)
             {
                 maintenanceAmount -= depreciationSpeed;
             }

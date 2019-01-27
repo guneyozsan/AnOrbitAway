@@ -22,7 +22,6 @@ public class Raycaster : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log("looking at something.");
             LookingAt?.Invoke(hit.transform);
         }
     }
