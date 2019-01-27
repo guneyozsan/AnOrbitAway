@@ -35,7 +35,32 @@ ModelImporter:
     4300004: Pinos
     4300006: Placas
     4300008: Couro
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Antenna
+    second: {fileID: 2100000, guid: d27e32fad9e0cd742ab1d991666ea010, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Couro
+    second: {fileID: 2100000, guid: 6e07f1d1ccd514f40ad06f4936c47b56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pinos
+    second: {fileID: 2100000, guid: 7ab70d0d7192ebf41af7f5ec10236323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Placas
+    second: {fileID: 2100000, guid: 1dba4c8f8195cfd41868a02388ae2e88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Sat\xE9lite"
+    second: {fileID: 2100000, guid: b9e4170e502eb854b80f4cabc417168d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
