@@ -28,14 +28,19 @@ public class Maintenance : MonoBehaviour
         {
             if (maintenanceAmount < 100f)
             {
-                maintenanceAmount += maintenanceSpeed;
+                maintenanceAmount += maintenanceSpeed * 60 * Time.deltaTime;
+            }
+            else
+            {
+                RepairCompleted?.Invoke();
+                repairing = false;
             }
         }
         else
         {
             if (maintenanceAmount > 0f)
             {
-                maintenanceAmount -= depreciationSpeed;
+                maintenanceAmount -= depreciationSpeed * 60 * Time.deltaTime;
             }
         }
 
