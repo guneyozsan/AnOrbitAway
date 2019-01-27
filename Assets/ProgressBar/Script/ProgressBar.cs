@@ -77,16 +77,8 @@ public class ProgressBar : MonoBehaviour
     {
         bar.fillAmount = val / 100;
         txtTitle.text = Title + " ";
-
-        if (Alert >= val)
-        {
-            bar.color = BarAlertColor;
-        }
-        else
-        {
-            bar.color = BarColor;
-        }
-
+        Color color = new Color((0.7f - bar.fillAmount), 0.7f * bar.fillAmount, 0) / 0.7f;
+        bar.color = color;
     }
 
 

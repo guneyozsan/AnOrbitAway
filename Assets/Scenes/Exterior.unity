@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569584804}
   m_LocalRotation: {x: -0.00000005960463, y: -0, z: 0.0000000149011505, w: 1}
-  m_LocalPosition: {x: 10, y: 457, z: -0}
+  m_LocalPosition: {x: 10, y: 388, z: -0}
   m_LocalScale: {x: 60, y: 60, z: 60}
   m_Children: []
   m_Father: {fileID: 1580833566}
@@ -835,7 +835,7 @@ Transform:
   m_GameObject: {fileID: 1125759008}
   m_LocalRotation: {x: -0.00000004470348, y: 1.7763566e-15, z: 0.000000059604638,
     w: 1}
-  m_LocalPosition: {x: -4, y: -149, z: -0}
+  m_LocalPosition: {x: -4, y: -257, z: -0}
   m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children: []
   m_Father: {fileID: 1580833566}
@@ -967,12 +967,12 @@ PrefabInstance:
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -754
+      value: -862
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3,
         type: 3}
@@ -1365,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -209
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3,
         type: 3}
@@ -1615,7 +1615,7 @@ Transform:
   m_GameObject: {fileID: 1640036685}
   m_LocalRotation: {x: -0.000000014901159, y: 0.000000014901159, z: 0.00000008940696,
     w: 1}
-  m_LocalPosition: {x: 198, y: -211, z: 0}
+  m_LocalPosition: {x: 198, y: -270, z: -0}
   m_LocalScale: {x: 60, y: 60, z: 60}
   m_Children: []
   m_Father: {fileID: 1580833566}
@@ -1888,8 +1888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84554fa23a3977241a25de5c5379f8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
-  axis: {x: 0, y: 0, z: 1}
+  speed: 1
+  axis: {x: 0, y: 0.2, z: 0.5}
 --- !u!1 &2008978741
 GameObject:
   m_ObjectHideFlags: 0
