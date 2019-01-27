@@ -16,13 +16,11 @@ public class MaintenanceIcon : MonoBehaviour
     {
         SetActive(false);
         Raycaster.LookingAt += Raycaster_LookingAt;
-        Maintenance.RepairCompleted += Maintenance_RepairCompleted;
     }
 
     private void OnDestroy()
     {
         Raycaster.LookingAt -= Raycaster_LookingAt;
-        Maintenance.RepairCompleted -= Maintenance_RepairCompleted;
     }
 
     public static event Action RepairStarted;
@@ -53,10 +51,5 @@ public class MaintenanceIcon : MonoBehaviour
     {
         repairing.SetActive(value);
         idle.SetActive(!value);
-    }
-
-    private void Maintenance_RepairCompleted()
-    {
-        gameObject.SetActive(false);
     }
 }
