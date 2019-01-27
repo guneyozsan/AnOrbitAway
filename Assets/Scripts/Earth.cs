@@ -12,12 +12,12 @@ public class Earth : MonoBehaviour
     [SerializeField]
     private ProgressBar homesickBar;
 
-    private float homesickAmount = 0f;
+    private float homesickAmount;
     private bool looking;
 
     private void Awake()
     {
-        homesickAmount = 0f;
+        homesickAmount = 100f;
         Raycaster.LookingAt += Raycaster_LookingAt;
     }
 
@@ -25,16 +25,16 @@ public class Earth : MonoBehaviour
     {
         if (looking)
         {
-            if (homesickAmount > 0f)
+            if (homesickAmount < 100f)
             {
-                homesickAmount -= relaxingSpeed;
+                homesickAmount += longingSpeed;
             }
         }
         else
         {
-            if (homesickAmount < 100f)
+            if (homesickAmount > 0f)
             {
-                homesickAmount += longingSpeed;
+                homesickAmount -= relaxingSpeed;
             }
         }
 
