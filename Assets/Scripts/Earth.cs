@@ -48,7 +48,8 @@ public class Earth : MonoBehaviour
 
     private void Raycaster_LookingAt(Transform target)
     {
-        if (target != transform)
+        if (target == null ||
+            target != transform)
         {
             looking = false;
             return;

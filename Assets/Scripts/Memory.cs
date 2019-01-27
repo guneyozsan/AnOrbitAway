@@ -3,13 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MeshRenderer))]
 public class Memory : MonoBehaviour
 {
     [SerializeField]
     private float fadeSpeed;
     [SerializeField]
-    private Transform earth;
+    RandomActivator randomActivator;
 
     private MeshRenderer meshRenderer;
     private bool lookingAtEarth;
@@ -17,8 +16,7 @@ public class Memory : MonoBehaviour
     private void Awake()
     {
         Raycaster.LookingAt += Raycaster_LookingAt;
-        meshRenderer = GetComponent<MeshRenderer>();
-        gameObject.SetActive(false);
+        randomActivator.SetActiveAll(false);
         lookingAtEarth = false;
     }
 
@@ -27,23 +25,25 @@ public class Memory : MonoBehaviour
         Raycaster.LookingAt -= Raycaster_LookingAt;
     }
 
-    private void Raycaster_LookingAt(Transform obj)
+    private void Raycaster_LookingAt(Transform target)
     {
-        if (obj != earth)
+        if (target == null ||
+            target != transform)
         {
-            if (lookingAtEarth)
-            {
-                gameObject.SetActive(false);
-                lookingAtEarth = false;
-            }
-
+            randomActivator.SetActiveAll(false);
+            lookingAtEarth = false;
             return;
         }
 
-        lookingAtEarth = true;
-        gameObject.SetActive(true);
-        meshRenderer.material.color = new Color(1f, 1f, 1f, 0f);
-        StartCoroutine(FadeIn());
+        if (!lookingAtEarth)
+        {
+            lookingAtEarth = true;
+            randomActivator.SetActiveRandom();
+            meshRenderer = randomActivator.GetCurrentActiveObject().GetComponent<MeshRenderer>();
+            meshRenderer.material.color = new Color(1f, 1f, 1f, 0f);
+            StopAllCoroutines();
+            StartCoroutine(FadeIn());
+        }
     }
 
     private IEnumerator FadeIn()

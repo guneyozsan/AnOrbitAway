@@ -22,7 +22,8 @@ public class Raycaster : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            LookingAt?.Invoke(hit.transform);
         }
+
+        LookingAt?.Invoke(hit.transform);
     }
 }
